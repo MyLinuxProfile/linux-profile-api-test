@@ -1,4 +1,7 @@
+import os
+
 from fastapi import FastAPI
+from app.database.nosql import db
 
 app = FastAPI(
         title="LinuxProfile",
@@ -11,8 +14,8 @@ app = FastAPI(
         }
         )
 
-@app.get("/")
-def get_status():
+@app.get("/status")
+async def get_status():
     """Get status of messaging server."""
     return ({"status":  "it's live"})
 
