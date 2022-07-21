@@ -7,7 +7,7 @@
 - [Docker](https://docs.docker.com/)
 
 # Help
-## Linux - Running the Project [PIP]
+### Linux - Running the Project [PIP]
 
  - Create a new Python virtual environment
 ```bash
@@ -26,7 +26,7 @@ pip install -r requirements.txt --no-cache-dir
 uvicorn app.main:app --host 0.0.0.0 --reload
 ```
 
-## Linux - Running the Project [Docker]
+### Linux - Running the Project [Docker]
 
  - Building the Docker image
 
