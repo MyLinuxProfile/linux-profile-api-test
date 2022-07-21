@@ -1,12 +1,9 @@
 import motor.motor_asyncio
 
-from os import getenv
-from dotenv import load_dotenv
 from bson import ObjectId
+from settings import DATABASE_NOSQL
 
-load_dotenv()
-
-client = motor.motor_asyncio.AsyncIOMotorClient(getenv("DATABASE_NOSQL"))
+client = motor.motor_asyncio.AsyncIOMotorClient(DATABASE_NOSQL)
 db = client.linux
 
 
