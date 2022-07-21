@@ -15,4 +15,17 @@ class ProfileModel(BaseModel):
         aloow_population_by_field_name = True
         arbitrary_types_allowed = True
         json_encoders = {ObjectId: str}
+        schema_extra = {
+                "example": {
+                    "pretty_name": "Ubuntu 21.10",
+                    "name": "Ubuntu",
+                    "version": "21.10 (Impish Indri)",
+                    "version_id": "21.10",
+                    "version_codename": "21.10 (Impish Indri)",
+                    "linux_id": "ubuntu",
+                    "linux_id_like": "debian",
+                    "info_terminal": [],
+                    "info_packages": []
+                    }
+                }
 
