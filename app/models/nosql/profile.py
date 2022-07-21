@@ -1,4 +1,5 @@
 from pydantic import BaseModel, Field
+from bson import ObjectId
 from app.database.nosql import PyObjectId
 
 class ProfileModel(BaseModel):
