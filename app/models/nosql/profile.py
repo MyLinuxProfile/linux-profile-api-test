@@ -1,6 +1,7 @@
 from pydantic import BaseModel, Field
 from bson import ObjectId
 from app.database.nosql import PyObjectId
+from typing import List
 
 class ProfileModel(BaseModel):
     id: PyObjectId = Field(default_factory=PyObjectId, alias="_id")
@@ -11,6 +12,8 @@ class ProfileModel(BaseModel):
     version_codename: str = Field(...)
     linux_id: str = Field(...)
     linux_id_like: str = Field(...)
+    info_terminal: List = None
+    info_packages: List = None
     
     class Config:
         aloow_population_by_field_name = True
