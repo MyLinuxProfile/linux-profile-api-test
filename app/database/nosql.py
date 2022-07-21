@@ -1,9 +1,9 @@
 import motor.motor_asyncio
 
 from bson import ObjectId
-from settings import DATABASE_NOSQL
+from settings import NOSQL_DATABASE_URL
 
-client = motor.motor_asyncio.AsyncIOMotorClient(DATABASE_NOSQL)
+client = motor.motor_asyncio.AsyncIOMotorClient(NOSQL_DATABASE_URL)
 db = client.linux
 
 
