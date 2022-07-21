@@ -13,7 +13,7 @@ class UserModel(Base):
     __table_args__ = {'extend_existing': True}
 
     id = Column(Integer, primary_key=True)
-        name = Column(Unicode(100), nullable=False)
+    name = Column(Unicode(100), nullable=False)
     email = Column(Unicode(100), nullable=False)
     token = Column(Unicode(255), nullable=False)
 
