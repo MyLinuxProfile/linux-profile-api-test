@@ -1,19 +1,4 @@
-import os
-
-from fastapi import FastAPI, Request, Depends
-from fastapi.encoders import jsonable_encoder
-from fastapi.responses import JSONResponse
-
-from typing import List
-
-from sqlalchemy.orm import Session
-
-from app.controller import ControllerUser, ControllerSyncUser
-from app.schemas.sync_user import SchemaSyncUser
-from app.schemas.user import SchemaUser
-
-from app.database.mysql import get_db
-from app.database.nosql import db
+from fastapi import FastAPI
 from app.api.routers import v1
 
 
