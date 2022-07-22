@@ -6,12 +6,12 @@ from typing import List
 
 from sqlalchemy.orm import Session
 
-from app.controllers.mysql import ControllerUser
+from app.core.mysql import ControllerUser
 from app.schemas.user import SchemaUser
 
 from app.database.mysql import get_db
 from app.database.nosql import db
-
+from upy_error import format_exception
 
 router = APIRouter()
 
@@ -28,6 +28,5 @@ def read_users(request: Request, db: Session = Depends(get_db)):
         return JSONResponse(content=json_compatible_item_data)
 
     except Exception as error:
-        print(error)
-        return None
+        print(format_exception(error))
 
