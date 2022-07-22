@@ -1,6 +1,7 @@
 import sqlalchemy
 
 from app.models.mysql.user import UserModel
+from app.models.mysql.sync_profile import SyncUserModel
 
 from app.database.mysql import Base, engine
 from sqlalchemy.orm import Session
@@ -59,5 +60,5 @@ class ControllerSyncUser(BaseController):
     def __init__(self, db: Session, data: dict = {}):
         super().__init__(db, data)
 
-        self.model_class = UserModel
+        self.model_class = SyncUserModel
 
