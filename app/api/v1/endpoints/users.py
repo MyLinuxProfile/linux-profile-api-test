@@ -6,7 +6,7 @@ from typing import List
 
 from sqlalchemy.orm import Session
 
-from app.controller import ControllerUser
+from app.controllers.mysql import ControllerUser
 from app.schemas.user import SchemaUser
 
 from app.database.mysql import get_db
