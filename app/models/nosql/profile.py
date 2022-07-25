@@ -12,9 +12,11 @@ class ProfileModel(BaseModel):
     version_codename: str = Field(...)
     linux_id: str = Field(...)
     linux_id_like: str = Field(...)
-    info_terminal: List = None
+    info_alias: List = None
+    info_konsoles: List = None
     info_packages: List = None
-    
+    info_scripts: List = None
+
     class Config:
         aloow_population_by_field_name = True
         arbitrary_types_allowed = True
@@ -28,8 +30,10 @@ class ProfileModel(BaseModel):
                     "version_codename": "21.10 (Impish Indri)",
                     "linux_id": "ubuntu",
                     "linux_id_like": "debian",
-                    "info_terminal": [],
-                    "info_packages": []
+                    "info_alias": [],
+                    "info_konsoles": [],
+                    "info_packages": [],
+                    "info_scripts": []
                     }
                 }
 
