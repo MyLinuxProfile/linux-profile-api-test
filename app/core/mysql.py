@@ -12,8 +12,7 @@ class BaseController(object):
     """Base View to create helpers common to all Webservices.
     """
     def __init__(self, db: Session, user_id: int, data: dict = {}):
-        """
-        Constructor
+        """Constructor
         """
         self.close_session = None
         if db:
