@@ -3,7 +3,7 @@ from app.schemas.base_schema import BaseSchema
 
 
 class SchemaUserBase(BaseSchema):
-    name: Optional[str] = None
+    user: Optional[str] = None
     email: Optional[str] = None
     token: Optional[str] = None
 
