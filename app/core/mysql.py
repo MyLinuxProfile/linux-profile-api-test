@@ -2,7 +2,6 @@ from app.models.mysql.user import UserModel
 from app.models.mysql.sync_profile import SyncUserModel
 from app.database.mysql import Base, engine
 
-from fastapi.responses import JSONResponse
 from sqlalchemy.orm import Session
 
 Base.metadata.create_all(bind=engine)
@@ -24,7 +23,7 @@ class BaseController(object):
         self.data = data
         self.user_id = user_id
         self.model_class = None
-       
+
     def get_all(self):
         """Method GET All
         """
