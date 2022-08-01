@@ -66,6 +66,20 @@ class ControllerUser(BaseController):
 
         self.model_class = UserModel
 
+    def get_all(self):
+        """Method GET All
+        """
+        try:
+            query = self.db.query(self.model_class).all()
+            return query
+
+        except Exception as error:
+            print(error)
+
+        finally:
+            if self.close_session:
+                self.db.close()
+
     def get_token(self, email: str, token: str):
         """GET Token
         """
