@@ -18,15 +18,6 @@ def validate(request: Request, myqldb: Session = Depends(get_db)):
         return authorized
 
 
-@router.get("/profiles",
-            response_description="List all profiles",
-            response_model=List[ProfileModel])
-async def list_profiles():
-
-    profiles = await db["profiles"].find().to_list(1000)
-    return profiles
-
-
 @router.get("/profiles/{id}",
             response_description="Get a single profile",
             response_model=ProfileModel)
