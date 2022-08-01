@@ -1,17 +1,19 @@
+import os
+
 from fastapi import FastAPI
 from app.api.routers import v1
 
 
+with open("app/static/docs/api.md", "r", encoding="utf-8") as fh:
+    description = fh.read()
+
+
 app = FastAPI(
         title="LinuxProfile",
-        description="Linux Profile Project",
-        version="0.0.1",
-        contact={
-            "name": "Fernando Celmer",
-            "url": "www.linuxprofile.com",
-            "email": "email@fernandocelmer.com",
-        }
-        )
+        description=description,
+        version="0.0.1"
+    )
+
 
 app.include_router(v1, prefix="/v1")
 
